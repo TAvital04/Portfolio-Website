@@ -1,0 +1,32 @@
+/*Documents*/
+
+    .body-contents {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5%;
+        justify-content: center;
+    }
+
+    .body-contents-card {
+        width:  50%;
+        margin-bottom: 5%;
+    }
+
+    .body-contents-card-document {
+        width: 100%;
+        height: 75vh;
+        margin-bottom: 5%;
+    }
+
+    .body-contents-card video {
+        height: auto;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    .body-contents-card-link {
+        display: flex;
+        justify-content: center;
+        color: black;
+        text-decoration: underline;
+    }

@@ -1,0 +1,30 @@
+/*Body*/
+
+.body-text {
+    font-size: 20px;
+}
+
+.body-text-link {
+    color: black;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+/*Body Contents*/
+
+    .body-contents-card {
+        margin: 5%;
+        display: flex;
+        gap: 5%;
+    }
+
+    .body-contents-card-right {
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 18px;
+    }
+
+    .body-contents-card-right-link {
+        color: black;
+        text-decoration: underline;
+    }
