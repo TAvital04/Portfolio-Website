@@ -1,48 +1,92 @@
 * {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    color: black;
 }
 
 /*Navigation Bar*/
+    .header {
+        background-color: #999999;
 
-    .header, .footer {
-        gap: 5%;
-        background-color: #999999
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
     }
-
-    .header-navbar-title a, .footer-navbar-title a {
+    
+    .navbar {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .navbar-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2.5%;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+    
+    .navbar-title-button {
         color: black;
         font-size: 30px;
         text-decoration: none;
     }
+    
+    .navbar-top-options-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 20px;
 
-    .header-navbar-menu-button-image, .footer-navbar-menu-button-image {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .nav-link {
+        font-size: 18px;
+    }
+    
+    .navbar-menu-button {
+        margin-left: auto;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .navbar-menu-button-image {
         width: 25px;
         height: auto;
     }
 
-    .header-navbar-menu a, .footer-navbar-menu a {
-        color: black;
-        font-size: 20px;
+    .navbar-search-bar {
+        margin-left: 2.5%;
+        margin-top: 1%;
     }
 
 /*Body*/
 
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
     .body-title {
+        width: 100%;
+        margin: 0;
+        padding: 30px 20px;
+        background-color: #CCCCCC;
         text-align: center;
         font-size: 75px;
-
-        width: 100%;
-        background-color: #CCCCCC;
+        box-sizing: border-box;
     }
 
     .body-text {
-        margin: 5%;
+        width: 100%;
+        padding: 40px 20px;
         font-size: 16px;
-    }
-
-/*Footer*/
-
-    .footer-buttons {
-        display: flex;
-        margin-left: 5%;
+        line-height: 1.6;
+        box-sizing: border-box;
     }

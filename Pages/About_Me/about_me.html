@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel = "stylesheet" href = "/bootstrap/css/bootstrap.min.css">
         <link rel = "stylesheet" href = "/Pages/style.css">
     </head>
 
     <body>
         <!--Header-->
         <div class = "header">
-            <nav class = "header-navbar navbar navbar-expand-lg">
-                <div class = "header-navbar-title">
-                    <a class = "header-navbar-title-button" href="/Pages/Home/home.html">Tal Avital</a>
+            <nav class = "navbar">
+                <div class="navbar-header">
+                    <nav class="navbar">
+                        <div class="navbar-top">
+                        <a class="navbar-title-button" href="/Pages/Home/home.html">Tal Avital</a>
+                    
+                        <div class="navbar-top-options-list">
+                            <!-- nav links injected here -->
+                        </div>
+                    
+                        <button class="navbar-menu-button" type="button">
+                            <img class="navbar-menu-button-image" src="/Assets/Menu_Options_Button.png" />
+                        </button>
+                        </div>
+                    </nav>
+                </div>
+                  
+
+                <div class="navbar-search">
+                    <input class = "navbar-search-bar" type = "text">
                 </div>
 
-                <button class="header-navbar-menu-button navbar-toggler" type="button" data-toggle="collapse" data-target="#header-navbarNav" aria-controls="header-navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <img class = "header-navbar-menu-button-image" src = "/Assets/Menu_Options_Button.png" width=100px height="auto">
-                </button>
-
-                <div class="header-navbar-menu collapse navbar-collapse" id="header-navbarNav">
-                    <a class="nav-link" href="/Pages/Home/home.html">Home</a>
-                    <a class="nav-link" href="/Pages/About_Me/about_me.html">About Me</a>
-                    <a class="nav-link" href="/Pages/Professional_Materials/professional_materials.html">Professional Materials</a>
-                    <a class="nav-link" href="/Pages/Projects/projects.html">Projects</a>
-                    <a class="nav-link" href="/Pages/Contact/contact.html">Contact Me</a>
+                <div class = "navbar-options">
+                    <ul class = "navbar-options-list"></ul>
                 </div>
             </nav>
         </div>
@@ -30,7 +38,7 @@
         <!--Body-->
         <div class = "body">
             <div class = "body-title">
-                About me
+                About Me
             </div>
 
             <div class = "body-text">
@@ -60,27 +68,34 @@
 
         <!--Footer-->
         <div class = "footer">
-            <nav class = "footer-navbar navbar navbar-expand-lg">
-                <div class = "footer-navbar-title">
-                    <a class = "footer-navbar-title-button" href="/Pages/Home/home.html">Tal Avital</a>
+            <nav class = "footer">
+                <div class="header">
+                    <nav class="navbar">
+                        <div class="navbar-top">
+                        <a class="navbar-title-button" href="/Pages/Home/home.html">Tal Avital</a>
+                    
+                        <div class="navbar-top-options-list">
+                            <!-- nav links injected here -->
+                        </div>
+                    
+                        <button class="navbar-menu-button" type="button">
+                            <img class="navbar-menu-button-image" src="/Assets/Menu_Options_Button.png" />
+                        </button>
+                        </div>
+                    </nav>
+                </div>
+                  
+
+                <div class="navbar-search">
+                    <input class = "navbar-search-bar" type = "text">
                 </div>
 
-                <button class="footer-navbar-menu-button navbar-toggler" type="button" data-toggle="collapse" data-target="#footer-navbarNav" aria-controls="footer-navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <img class = "footer-navbar-menu-button-image" src = "/Assets/Menu_Options_Button.png" width=100px height="auto">
-                </button>
-
-                <div class="footer-navbar-menu collapse navbar-collapse" id="footer-navbarNav">
-                    <a class="nav-link" href="/Pages/Home/home.html">Home</a>
-                    <a class="nav-link" href="/Pages/About_Me/about_me.html">About Me</a>
-                    <a class="nav-link" href="/Pages/Professional_Materials/professional_materials.html">Professional Materials</a>
-                    <a class="nav-link" href="/Pages/Projects/projects.html">Projects</a>
-                    <a class="nav-link" href="/Pages/Contact/contact.html">Contact Me</a>
+                <div class = "navbar-options">
+                    <ul class = "navbar-options-list"></ul>
                 </div>
             </nav>
         </div>
         
-        <!--Bootstrap Javascript Declarations-->
-        <script src="/bootstrap/js/jquery-3.7.1.js"></script>
-        <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
-    </body>
+    <!--Javascript Declarations-->
+    <script src = "/Scripts/navbar.js"></script>
 </html>
