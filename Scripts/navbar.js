@@ -53,10 +53,14 @@ function createMenuOptions() {
         "Contact", "contact", "Contact Me"
     ));
 
+    menu.push(createOption(
+        "Settings", "settings", "Settings"
+    ));
+
     return menu;
 }
 
-function render() {
+function renderNavbar() {
     const isMobile = window.innerWidth < 850;
 
     if (isMobile) {
@@ -66,10 +70,12 @@ function render() {
             options.style.flexDirection = "column";
             options.style.gap = "10px";
             options.innerHTML = menuOptions.map((item) => item.toLink()).join("");
+            document.querySelector(".navbar-options").style.marginTop = "5%";
         } else {
             searchBox.style.display = "none";
             options.style.display = "none";
             options.innerHTML = "";
+            document.querySelector(".navbar-options").style.marginTop = "0";
         }
 
         button.style.display = "block";
@@ -85,6 +91,7 @@ function render() {
         optionsTop.style.justifyContent = "flex-end";
         optionsTop.style.gap = "20px";
         optionsTop.innerHTML = menuOptions.map((item) => item.toLink()).join("");
+        document.querySelector(".navbar-options").style.marginTop = "0";
 
         // Only reset toggle when resizing to desktop
         buttonToggle = false;
@@ -93,7 +100,7 @@ function render() {
 
 
 // Main
-render();
+renderNavbar();
 
 // EventListener for the searchbar
 searchBox.addEventListener('input', () => {
@@ -102,17 +109,17 @@ searchBox.addEventListener('input', () => {
     );
     filteredMenuOptions = filtered;
 
-    options.innerHTML = filteredMenuOptions.map((item) => item.toLink()).join("\n");
-    optionsTop.innerHTML = filteredMenuOptions.map((item) => item.toLink()).join("\t");
+    options.innerHTML = filteredMenuOptions.map((item) => item.toLink()).join("");
+    optionsTop.innerHTML = filteredMenuOptions.map((item) => item.toLink()).join("");
 })
 
 // EventListener for the window size
 window.addEventListener('resize', () => {
-    render();
+    renderNavbar();
 })
 
 // EventListener for the button
 button.addEventListener('click', () => {
     buttonToggle = !buttonToggle;
-    render();
+    renderNavbar();
 })

@@ -2,12 +2,7 @@
 
     .body-text {
         font-size: 20px;
-    }
-
-    .body-text-link {
-        color: black;
-        text-decoration: underline;
-        font-size: 20px;
+        margin-left: 2.5%
     }
 
     /*Body Contents*/
@@ -17,10 +12,4 @@
 
             display: flex;
             gap: 5%;
-        }
-
-        .body-contents-card-right-link {
-            color: black;
-            text-decoration: underline;
-            font-size: 18px;
         }

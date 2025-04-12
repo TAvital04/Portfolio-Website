@@ -2,17 +2,17 @@
 <html lang = "en">
     <head>
         <meta charset = "utf-8">
-        <title>Sample Interview</title>
+        <title>Settings</title>
 
         <link rel = "stylesheet" href = "/Pages/style.css">
-        <link rel = "stylesheet" href = "/Pages/Professional_Materials/Professional_Materials_Sample_Interview/professional_materials_sample_interview.css">
+        <link rel = "stylesheet" href = "/Pages/Settings/settings-style.css">
     </head>
 
     <body>
         <!--Header-->
         <div class = "header">
             <nav class = "navbar">
-                <div class="header">
+                <div class="navbar-header">
                     <nav class="navbar">
                         <div class="navbar-top">
                         <a class="navbar-title-button" href="/Pages/Home/home.html">Tal Avital</a>
@@ -26,8 +26,7 @@
                         </button>
                         </div>
                     </nav>
-                </div>
-                  
+                </div>  
 
                 <div class="navbar-search">
                     <input class = "navbar-search-bar" type = "text">
@@ -42,21 +41,15 @@
         <!--Body-->
         <div class = "body">
             <div class = "body-title">
-                <p>Sample Interview</p>
-            </div>
-
-            <div class = "body-text">
-                <p>
-                    This is a sample interview I directed toward a job posting for Navy Federal, a company seeking a data engineer that would join a new team focused on employee development.
-                    <br><br>
-                    In this sample interview, I provided an anecdote from my time teaching kids hebrew at my local temple that I hope showcases the mindset that I carray when I join a professional team. 
-                </p>
+                <p>Settings</p>
             </div>
 
             <div class = "body-contents">
-                <div class = "body-contents-card">
-                    <video controls class = "body-contents-card-document" src = "/Assets/Interview.mp4"></video>
-                </div>
+                <ul class = "body-contents-list">
+                    <li>
+                        <button class = "body-contents-button" type = "button" id = "dark-mode">Dark Mode</button>
+                    </li>
+                </ul>
             </div>
         </div>
 
@@ -66,11 +59,13 @@
                 <!-- footer links injected here -->
             </div>
         </div>
-        
+
         <!--Javascript Declarations-->
         <script src = "/Pages/script.js"></script>
 
         <script src = "/Scripts/navbar.js"></script>
         <script src = "/Scripts/footer.js"></script>
+
+        <script src = "/Pages/Settings/settings-script.js"></script>
     </body>
 </html>

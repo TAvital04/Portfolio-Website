@@ -4,13 +4,16 @@
     color: black;
 }
 
+:root {
+    view-transition-name: root;
+}
+
 /*Navigation Bar*/
     .header {
-        background-color: #999999;
-
         width: 100%;
         box-sizing: border-box;
         overflow-x: hidden;
+        position: fixed;
     }
     
     .navbar {
@@ -71,22 +74,40 @@
     body {
         margin: 0;
         padding: 0;
+
+        display: flex;
+        flex-direction: column;
     }
 
     .body-title {
         width: 100%;
         margin: 0;
         padding: 30px 20px;
-        background-color: #CCCCCC;
         text-align: center;
         font-size: 75px;
         box-sizing: border-box;
     }
 
     .body-text {
-        width: 100%;
         padding: 40px 20px;
         font-size: 16px;
         line-height: 1.6;
+        height: 100%;
+    }
+
+    .footer {
+        width: 100%;
         box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .footer-options-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        max-width: 100%;
+        box-sizing: border-box;
+
+        margin: 2%;
     }

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang = "en">
     <head>
+        <meta charset = "utf-8">
+        <title>Professional Materials</title>
+
         <link rel = "stylesheet" href = "/Pages/Professional_Materials/professional_materials-style.css">
         <link rel = "stylesheet" href = "/Pages/style.css">
     </head>
@@ -19,7 +22,7 @@
                         </div>
                     
                         <button class="navbar-menu-button" type="button">
-                            <img class="navbar-menu-button-image" src="/Assets/Menu_Options_Button.png" />
+                            <img class="navbar-menu-button-image" src="/Assets/Menu_Options_Button.png" alt = "button-image">
                         </button>
                         </div>
                     </nav>
@@ -39,13 +42,15 @@
         <!--Body-->
         <div class = "body">
             <div class = "body-title">
-                Professional Materials
+                <p>Professional Materials</p>
             </div>
 
             <div class = "body-text">
-                These three files provide a general outline of my professional experience. They include my resume, a general cover letter, and a sample interview.
-                <br/><br/>
-                I created the cover letter and sample interview for a job posting for a position at Navy Federal, who were seeking a data engineer to join a new team focused on employee development. 
+                <p>
+                    These three files provide a general outline of my professional experience. They include my resume, a general cover letter, and a sample interview.
+                    <br><br>
+                    I created the cover letter and sample interview for a job posting for a position at Navy Federal, who were seeking a data engineer to join a new team focused on employee development. 
+                </p>
             </div>
 
             <div class = "body-contents">
@@ -60,17 +65,23 @@
                 </div>
 
                 <div class = "body-contents-card">
-                    <video controls class = "body-contents-card-video" src = "/Assets/Interview.mp4" type = "video/mp4"></video>
+                    <video controls class = "body-contents-card-video" src = "/Assets/Interview.mp4"></video>
                     <a class = "body-contents-card-link" href = "/Pages/Professional_Materials/Professional_Materials_Sample_Interview/professional_materials_sample_interview.html">Sample Interview</a>
                 </div>
             </div>
         </div>
 
+        <!--Footer-->
         <div class = "footer">
-            
+            <div class="footer-options-list">
+                <!-- footer links injected here -->
+            </div>
         </div>
 
         <!--Javascript Declarations-->
+        <script src = "/Pages/script.js"></script>
+
         <script src = "/Scripts/navbar.js"></script>
+        <script src = "/Scripts/footer.js"></script>
     </body>
 </html>

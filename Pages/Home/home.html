@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang = "en">
     <head>
+        <meta charset = "utf-8">
+        <title>Home</title>
+
         <link rel = "stylesheet" href = "/Pages/style.css">
+        <link rel = "stylesheet" href = "/Pages/Home/home.css">
     </head>
 
     <body>
         <!--Header-->
         <div class = "header">
             <nav class = "navbar">
-                <div class="header">
-                    <nav class="navbar">
-                        <div class="navbar-top">
+                <nav class="navbar">
+                    <div class="navbar-top">
                         <a class="navbar-title-button" href="/Pages/Home/home.html">Tal Avital</a>
                     
                         <div class="navbar-top-options-list">
@@ -18,11 +21,10 @@
                         </div>
                     
                         <button class="navbar-menu-button" type="button">
-                            <img class="navbar-menu-button-image" src="/Assets/Menu_Options_Button.png" />
+                            <img class="navbar-menu-button-image" src="/Assets/Menu_Options_Button.png" alt = "button-image">
                         </button>
-                        </div>
-                    </nav>
-                </div>
+                    </div>
+                </nav>
                   
 
                 <div class="navbar-search">
@@ -38,13 +40,15 @@
         <!--Body-->
         <div class = "body">
             <div class = "body-title">
-                Tal Avital
+                <p>Tal Avital</p>
             </div>
 
             <div class = "body-text">
-                This portfolio presents my computer science skills and development, and it's designed to help you understand why I would be a valuable asset to your team.
-                <br/><br/>
-                Here, you will find personal projects where I embrace my creative freedom and scholarly projects that showcase my technical skills. I also have my resume and contact information for you to access easily.
+                <p>
+                    This portfolio presents my computer science skills and development, and it's designed to help you understand why I would be a valuable asset to your team.
+                    <br><br>
+                    Here, you will find personal projects where I embrace my creative freedom and scholarly projects that showcase my technical skills. I also have my resume and contact information for you to access easily.
+                </p>
             </div>
         </div>
 
@@ -54,8 +58,11 @@
                 <!-- footer links injected here -->
             </div>
         </div>
-    </body>
 
-    <!--Javascript Declarations-->
-    <script src = "/Scripts/navbar.js"></script>
+        <!--Javascript Declarations-->
+        <script src = "/Pages/script.js"></script>
+
+        <script src = "/Scripts/navbar.js"></script>
+        <script src = "/Scripts/footer.js"></script>
+    </body>
 </html>
