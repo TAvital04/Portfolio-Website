@@ -1,3 +1,13 @@
 .body {
     height: 100vh;
 }
+
+.body-contents-button {
+    border: 0;
+    background-color: transparent;
+
+    font-size: 18px;
+
+    cursor: pointer;
+    
+}
