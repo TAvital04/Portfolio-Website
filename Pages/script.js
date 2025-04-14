@@ -10,6 +10,7 @@ const cursorGlow = document.getElementById("cursor-glow");
 
 // Declare variables
 var lightMode = localStorage.getItem("lightMode") === "false" ? false : true;
+var mouseGlow = localStorage.getItem("mouseGlow") === "false" ? false : true;
 
 // Main
 render();
@@ -24,9 +25,6 @@ function render()
         title.style.setProperty("background-color", "#CCCCCC");
         body.style.setProperty("background-color", "#FFFFFF");
         footer.style.setProperty("background-color", "#BBBBBB");
-
-        cursorGlow.style.backgroundColor = "#00000088";
-        cursorGlow.style.boxShadow = "0 0 10px #00000088";    
     }
     else
     {
@@ -34,10 +32,27 @@ function render()
         title.style.setProperty("background-color", "#777777");
         body.style.setProperty("background-color", "#AAAAAA");
         footer.style.setProperty("background-color", "#888888");
+    }
 
-        cursorGlow.style.backgroundColor = "#00ffff88";
-        cursorGlow.style.boxShadow = "0 0 10px #00ffff88";
-        
+    if(mouseGlow === true)
+    {
+        document.querySelector("body").style.cursor = "none";
+        document.getElementById("cursor-glow").style.display = "block";
+        if(lightMode === true)
+        {
+            cursorGlow.style.backgroundColor = "#00000088";
+            cursorGlow.style.boxShadow = "0 0 10px #00000088";  
+        }
+        else
+        {
+            cursorGlow.style.backgroundColor = "#00ffff88";
+            cursorGlow.style.boxShadow = "0 0 10px #00ffff88";
+        }
+    }
+    else
+    {
+        document.querySelector("body").style.cursor = "auto";
+        document.getElementById("cursor-glow").style.display = "none";
     }
 }
 
@@ -46,6 +61,50 @@ footerButton.addEventListener("click", () => {
 })
 
 document.addEventListener("mousemove", (e) => {
+    // Get the mouse type
+    const hoveredElement = document.elementFromPoint(e.clientX, e.clientY);
+    const isInteractive = hoveredElement && (
+        hoveredElement.tagName === "BUTTON" ||
+        hoveredElement.tagName === "A" ||
+        hoveredElement.tagName === "IMG"
+    );
+
+    // Change glow based on pointer status
+    if (isInteractive === true)
+    {
+        if(mouseGlow === true)
+        {
+            cursorGlow.style.backgroundColor = "#00ff00";
+            cursorGlow.style.boxShadow = "0 0 10px #00ff00";
+            hoveredElement.style.cursor = "none";
+        }
+        else
+        {
+            hoveredElement.style.cursor = "pointer";
+        }
+    } 
+    else 
+    {
+        if(mouseGlow === true)
+        {
+            if (lightMode) 
+            {
+                cursorGlow.style.backgroundColor = "#00000088";
+                cursorGlow.style.boxShadow = "0 0 10px #00000088";
+            } 
+            else 
+            {
+                cursorGlow.style.backgroundColor = "#00ffff88";
+                cursorGlow.style.boxShadow = "0 0 10px #00ffff88";
+            }
+        }
+        else
+        {
+            hoveredElement.style.cursor = "auto";
+        }
+    }
+    
+    // Move the glow
     cursorGlow.style.left = e.clientX + "px";
     cursorGlow.style.top = e.clientY + "px";
 });

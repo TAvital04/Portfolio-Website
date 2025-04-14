@@ -1,5 +1,6 @@
 // Declare variables
 const darkModeButton = document.querySelector("#dark-mode");
+const mouseGlowButton = document.querySelector("#mouse-glow");
 
 // Functions
 
@@ -20,3 +21,10 @@ const darkModeButton = document.querySelector("#dark-mode");
             darkModeButton.innerHTML = "Light Mode";
         }
     });
+
+    // EventListener for the mouse glow button
+    mouseGlowButton.addEventListener("click", () => {
+        mouseGlow = !mouseGlow;
+        localStorage.setItem("mouseGlow", mouseGlow);
+        render();
+    })
