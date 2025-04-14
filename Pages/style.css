@@ -129,3 +129,17 @@
         width: 25px;
         height: auto;
     }
+
+/*Mouse*/
+    #cursor-glow {
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        transition: background-color 0.3s, box-shadow 0.3s;
+
+        transition: background-color 0.3s, box-shadow 0.3s, transform 0.1s linear;
+        transform: translate(-50%, -50%);
+    }
