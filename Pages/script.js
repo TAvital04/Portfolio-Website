@@ -4,6 +4,8 @@ const title = document.querySelector(".body-title");
 const body = document.querySelector(".body");
 const footer = document.querySelector(".footer");
 
+const footerButton = document.querySelector(".footer-button");
+
 // Declare variables
 var lightMode = localStorage.getItem("lightMode") === "false" ? false : true;
 
@@ -29,3 +31,7 @@ function render()
         footer.style.setProperty("background-color", "#888888");
     }
 }
+
+footerButton.addEventListener("click", () => {
+    window.scrollTo({top: 0});
+})
